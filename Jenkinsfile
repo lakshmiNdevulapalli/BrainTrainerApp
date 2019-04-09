@@ -7,7 +7,8 @@ pipeline {
           steps {
             sh '''java -version
 chmod +x gradlew'''
-            sh './gradlew clean'
+            sh '''./gradlew clean
+chmod 755 /Users/baladevulapalli/Library/Android/sdk'''
             sh './gradlew assembleDebug'
           }
         }
